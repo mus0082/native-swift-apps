@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KdD-tr-x47">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="IUz-o7-QH3">
+            <objects>
+                <viewController id="KdD-tr-x47" customClass="ViewController" customModule="CollectionViewWithDynamic_Cells" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w15-8k-gJo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="drx-LB-GRv">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dVi-nC-a79">
+                                    <size key="itemSize" width="363" height="570"/>
+                                    <size key="estimatedItemSize" width="373" height="88"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galaxyScreenshot" id="wWz-nm-v9D">
+                                    <rect key="frame" x="0.0" y="-59" width="393" height="818"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dynamicCell" id="azq-3e-5Zf" customClass="dynamicCellForDisplay" customModule="CollectionViewWithDynamic_Cells" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="5" width="363" height="570"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xyX-mN-FAt">
+                                            <rect key="frame" x="0.0" y="0.0" width="363" height="570"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTU-Dr-weg">
+                                                    <rect key="frame" x="259" y="514" width="96" height="54.333333333333371"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="show alert"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="whenPressedAlertWillShowPrint:" destination="KdD-tr-x47" eventType="touchUpInside" id="tbg-x8-IIw"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thanosScreenshot" translatesAutoresizingMaskIntoConstraints="NO" id="nOW-KM-SBL">
+                                                    <rect key="frame" x="54" y="21" width="240" height="422"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="240" id="CCX-g5-7Mg"/>
+                                                        <constraint firstAttribute="height" constant="422" id="K0A-FT-67f"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ec8-iu-sIc">
+                                                    <rect key="frame" x="15" y="509" width="227" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="227" id="8pi-Ol-4lQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="sTU-Dr-weg" secondAttribute="trailing" constant="8" id="3BF-ll-BGu"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ec8-iu-sIc" secondAttribute="bottom" constant="19" id="9a3-9k-563"/>
+                                                <constraint firstItem="sTU-Dr-weg" firstAttribute="top" secondItem="nOW-KM-SBL" secondAttribute="bottom" constant="71" id="BcN-zZ-zdq"/>
+                                                <constraint firstItem="nOW-KM-SBL" firstAttribute="top" secondItem="xyX-mN-FAt" secondAttribute="top" constant="21" id="CSt-fE-Ym1"/>
+                                                <constraint firstItem="Ec8-iu-sIc" firstAttribute="top" secondItem="nOW-KM-SBL" secondAttribute="bottom" constant="66" id="HpP-8Y-E2G"/>
+                                                <constraint firstItem="nOW-KM-SBL" firstAttribute="leading" secondItem="xyX-mN-FAt" secondAttribute="leading" constant="54" id="aA3-Cc-N3K"/>
+                                                <constraint firstItem="Ec8-iu-sIc" firstAttribute="leading" secondItem="xyX-mN-FAt" secondAttribute="leading" constant="15" id="cAe-Bn-1e2"/>
+                                                <constraint firstAttribute="trailing" secondItem="nOW-KM-SBL" secondAttribute="trailing" constant="69" id="fAe-PA-409"/>
+                                                <constraint firstItem="sTU-Dr-weg" firstAttribute="leading" secondItem="Ec8-iu-sIc" secondAttribute="trailing" constant="17" id="iX3-GV-zr3"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="363" height="570"/>
+                                        <connections>
+                                            <outlet property="descriptionTextArray" destination="Ec8-iu-sIc" id="gZw-CI-mAf"/>
+                                            <outlet property="forButtonTrigger" destination="sTU-Dr-weg" id="5t4-Vy-75r"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="KdD-tr-x47" id="Crc-ms-Icg"/>
+                                    <outlet property="delegate" destination="KdD-tr-x47" id="cnA-wC-iz3"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ECA-tq-2lu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ECA-tq-2lu" firstAttribute="bottom" secondItem="drx-LB-GRv" secondAttribute="bottom" id="GhK-K5-6hc"/>
+                            <constraint firstItem="drx-LB-GRv" firstAttribute="leading" secondItem="ECA-tq-2lu" secondAttribute="leading" id="K6o-l6-S76"/>
+                            <constraint firstItem="ECA-tq-2lu" firstAttribute="trailing" secondItem="drx-LB-GRv" secondAttribute="trailing" id="SFb-Pk-pkp"/>
+                            <constraint firstItem="drx-LB-GRv" firstAttribute="top" secondItem="w15-8k-gJo" secondAttribute="top" id="Vav-mn-O3Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="forDynamicCollectionView" destination="drx-LB-GRv" id="hpC-bW-Unn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W58-J5-xfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-187.02290076335876" y="-339.43661971830988"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="galaxyScreenshot" width="640" height="360"/>
+        <image name="thanosScreenshot" width="200" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
