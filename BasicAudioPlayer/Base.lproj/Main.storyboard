@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BasicAudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hungerGamesBackground" translatesAutoresizingMaskIntoConstraints="NO" id="v5o-Il-IGP">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thF-f2-mqb">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zsx-7p-o23">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hungerGames" translatesAutoresizingMaskIntoConstraints="NO" id="Qtf-3W-8cr">
+                                            <rect key="frame" x="95" y="350" width="240" height="232"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="232" id="rDE-k3-ii6"/>
+                                                <constraint firstAttribute="width" constant="240" id="wV5-QK-waS"/>
+                                            </constraints>
+                                        </imageView>
+                                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2JY-Ic-8KB">
+                                            <rect key="frame" x="0.0" y="772" width="430" height="130"/>
+                                            <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                            <items>
+                                                <barButtonItem title="Play" image="play.fill" catalog="system" id="JRw-Ox-BLx">
+                                                    <color key="tintColor" red="0.69411766529999996" green="0.4618787701" blue="0.11220352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="playAction:" destination="BYZ-38-t0r" id="rhk-bH-d0i"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem style="plain" systemItem="flexibleSpace" id="HhK-PA-G6r"/>
+                                                <barButtonItem title="Pause" image="pause.fill" catalog="system" id="UBe-am-cUG">
+                                                    <color key="tintColor" red="0.69411766529999996" green="0.4618787701" blue="0.11220352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="pauseAction:" destination="BYZ-38-t0r" id="KqL-iC-rDL"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem style="plain" systemItem="flexibleSpace" id="7kX-8J-kVv"/>
+                                                <barButtonItem title="Stop" image="stop.fill" catalog="system" id="BHO-Ji-w0t">
+                                                    <color key="tintColor" red="0.69411766529999996" green="0.4071708483" blue="0.25796419469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="stopAction:" destination="BYZ-38-t0r" id="Giw-yz-wVW"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem style="plain" systemItem="flexibleSpace" id="5Zb-p4-J9I"/>
+                                                <barButtonItem title="Forward" image="forward.fill" catalog="system" id="cIk-oe-Ggk">
+                                                    <color key="tintColor" red="0.69411766529999996" green="0.4071708483" blue="0.25796419469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="forwardAction:" destination="BYZ-38-t0r" id="UvQ-Ot-g34"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem style="plain" systemItem="flexibleSpace" id="GJs-sm-3Sw"/>
+                                                <barButtonItem title="Backward" image="backward.fill" catalog="system" id="ce3-zD-yjT">
+                                                    <color key="tintColor" red="0.69411766529999996" green="0.4071708483" blue="0.25796419469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="backwardAction:" destination="BYZ-38-t0r" id="FE9-vy-a6v"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </items>
+                                        </toolbar>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pE8-nb-gkB">
+                                            <rect key="frame" x="0.0" y="774" width="430" height="75"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aOx-ul-wRz">
+                                                    <rect key="frame" x="51" y="9" width="328" height="31"/>
+                                                    <color key="tintColor" red="0.69411766529999996" green="0.4071708483" blue="0.25796419469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="playerSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="XeR-L5-6nz"/>
+                                                    </connections>
+                                                </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goj-oU-sY7">
+                                                    <rect key="frame" x="395" y="13.000000000000002" width="27" height="20.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.69411766529999996" green="0.4071708483" blue="0.25796419469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egM-pr-4oO">
+                                                    <rect key="frame" x="8" y="13.000000000000002" width="37" height="20.666666666666671"/>
+                                                    <color key="tintColor" red="0.69411766529999996" green="0.4071708483" blue="0.25796419469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.69411766529999996" green="0.4071708483" blue="0.25796419469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="e9c-Qr-UjJ">
+                                                    <rect key="frame" x="156" y="36.333333333333371" width="118" height="31"/>
+                                                    <color key="tintColor" red="0.69411766529999996" green="0.4071708483" blue="0.25796419469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="volumeControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="b2A-0T-1EE"/>
+                                                    </connections>
+                                                </slider>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="aOx-ul-wRz" firstAttribute="centerX" secondItem="pE8-nb-gkB" secondAttribute="centerX" id="A3R-oZ-Pgw"/>
+                                                <constraint firstItem="e9c-Qr-UjJ" firstAttribute="top" secondItem="pE8-nb-gkB" secondAttribute="top" constant="36.333333333333371" id="HYl-Yd-YCD"/>
+                                                <constraint firstItem="goj-oU-sY7" firstAttribute="leading" secondItem="aOx-ul-wRz" secondAttribute="trailing" constant="18" id="HuU-uc-0om"/>
+                                                <constraint firstAttribute="trailing" secondItem="goj-oU-sY7" secondAttribute="trailing" constant="8" id="P5h-Jr-1SD"/>
+                                                <constraint firstItem="egM-pr-4oO" firstAttribute="top" secondItem="pE8-nb-gkB" secondAttribute="top" constant="13" id="Xna-ft-lSf"/>
+                                                <constraint firstItem="egM-pr-4oO" firstAttribute="leading" secondItem="pE8-nb-gkB" secondAttribute="leading" constant="8" id="fg8-cA-nVU"/>
+                                                <constraint firstAttribute="trailing" secondItem="e9c-Qr-UjJ" secondAttribute="trailing" constant="158" id="kaB-ot-XIt"/>
+                                                <constraint firstItem="aOx-ul-wRz" firstAttribute="top" secondItem="pE8-nb-gkB" secondAttribute="top" constant="9" id="n4p-I7-T4q"/>
+                                                <constraint firstItem="aOx-ul-wRz" firstAttribute="leading" secondItem="egM-pr-4oO" secondAttribute="trailing" constant="8" symbolic="YES" id="sd6-Y3-Zzy"/>
+                                                <constraint firstItem="goj-oU-sY7" firstAttribute="top" secondItem="pE8-nb-gkB" secondAttribute="top" constant="13" id="uvq-MB-LUg"/>
+                                                <constraint firstItem="e9c-Qr-UjJ" firstAttribute="leading" secondItem="pE8-nb-gkB" secondAttribute="leading" constant="158" id="xgY-Iq-S5A"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2JY-Ic-8KB" firstAttribute="leading" secondItem="zsx-7p-o23" secondAttribute="leading" id="P0d-qB-S3l"/>
+                                        <constraint firstAttribute="trailing" secondItem="pE8-nb-gkB" secondAttribute="trailing" id="Q24-Um-Hhg"/>
+                                        <constraint firstItem="Qtf-3W-8cr" firstAttribute="centerY" secondItem="zsx-7p-o23" secondAttribute="centerY" id="gkG-ye-hqw"/>
+                                        <constraint firstItem="pE8-nb-gkB" firstAttribute="leading" secondItem="zsx-7p-o23" secondAttribute="leading" id="kdp-0J-tQG"/>
+                                        <constraint firstAttribute="trailing" secondItem="2JY-Ic-8KB" secondAttribute="trailing" id="mD1-Iz-oIW"/>
+                                        <constraint firstItem="Qtf-3W-8cr" firstAttribute="centerX" secondItem="zsx-7p-o23" secondAttribute="centerX" id="oW3-ti-Q6b"/>
+                                        <constraint firstItem="pE8-nb-gkB" firstAttribute="top" secondItem="Qtf-3W-8cr" secondAttribute="bottom" constant="192" id="pJR-oX-M2S"/>
+                                        <constraint firstItem="pE8-nb-gkB" firstAttribute="bottom" secondItem="2JY-Ic-8KB" secondAttribute="bottom" constant="-53" id="r8j-cX-O4a"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="thF-f2-mqb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="31l-n7-Li3"/>
+                            <constraint firstItem="thF-f2-mqb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Co4-de-4oD"/>
+                            <constraint firstItem="v5o-Il-IGP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DUx-EY-oHh"/>
+                            <constraint firstItem="v5o-Il-IGP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DbZ-Cg-aJm"/>
+                            <constraint firstItem="2JY-Ic-8KB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="713" id="Q7E-vL-ZR6"/>
+                            <constraint firstAttribute="bottom" secondItem="thF-f2-mqb" secondAttribute="bottom" id="QEc-Fe-OtI"/>
+                            <constraint firstAttribute="bottom" secondItem="v5o-Il-IGP" secondAttribute="bottom" id="VNA-tv-gqD"/>
+                            <constraint firstItem="v5o-Il-IGP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="khZ-GV-DEB"/>
+                            <constraint firstItem="2JY-Ic-8KB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="4" id="l3H-h9-vz8"/>
+                            <constraint firstItem="thF-f2-mqb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tww-04-J4W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backwardBtn" destination="ce3-zD-yjT" id="0ov-96-EKf"/>
+                        <outlet property="forwardBtn" destination="cIk-oe-Ggk" id="WDZ-L0-Isd"/>
+                        <outlet property="pauseBtn" destination="UBe-am-cUG" id="Np8-vm-ENO"/>
+                        <outlet property="playBtn" destination="JRw-Ox-BLx" id="3Pn-U7-QIk"/>
+                        <outlet property="sliderPlayer" destination="aOx-ul-wRz" id="sOL-Jj-2KV"/>
+                        <outlet property="stopBtn" destination="BHO-Ji-w0t" id="nhZ-5b-SUG"/>
+                        <outlet property="timeElapsed" destination="goj-oU-sY7" id="ECg-f4-o4X"/>
+                        <outlet property="timeStarted" destination="egM-pr-4oO" id="Vbo-zh-Ik5"/>
+                        <outlet property="volume" destination="e9c-Qr-UjJ" id="hgx-1N-0Am"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1497.2093023255813" y="-75.321888412017174"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backward.fill" catalog="system" width="128" height="77"/>
+        <image name="forward.fill" catalog="system" width="128" height="77"/>
+        <image name="hungerGames" width="283.33334350585938" height="177"/>
+        <image name="hungerGamesBackground" width="283.33334350585938" height="283.33334350585938"/>
+        <image name="pause.fill" catalog="system" width="117" height="128"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
