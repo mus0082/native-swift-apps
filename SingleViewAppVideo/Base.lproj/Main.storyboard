@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VideoViewController" customModule="SingleViewAppVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shb-bU-O1N">
+                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <items>
+                                    <barButtonItem title="Play" image="play.fill" catalog="system" id="97h-iC-YLb">
+                                        <color key="tintColor" red="0.26511224210000001" green="0.32817635369999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="Play:" destination="BYZ-38-t0r" id="vLP-dC-ZLa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0Dn-8z-z8C"/>
+                                    <barButtonItem title="Pause" image="pause.fill" catalog="system" id="UhY-cO-CNX">
+                                        <color key="tintColor" red="0.26511224210000001" green="0.32817635369999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="Pause:" destination="BYZ-38-t0r" id="qzm-SN-Spm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vj2-en-v1o"/>
+                                    <barButtonItem title="Rewind" image="backward.fill" catalog="system" id="9jv-R1-bBn">
+                                        <color key="tintColor" red="0.26511224210000001" green="0.32817635369999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="Rewind:" destination="BYZ-38-t0r" id="0DZ-pK-yDv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CHa-YL-zMX"/>
+                                    <barButtonItem title="Stop" image="stop.fill" catalog="system" id="HV6-bz-Rjh">
+                                        <color key="tintColor" red="0.26511224210000001" green="0.32817635369999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="Stop:" destination="BYZ-38-t0r" id="mLb-NG-FOq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gcC-SM-AO0"/>
+                                    <barButtonItem title="Forward" image="forward.fill" catalog="system" id="8g4-xG-wzd">
+                                        <color key="tintColor" red="0.26511224210000001" green="0.32817635369999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="forward:" destination="BYZ-38-t0r" id="MJS-f1-GxH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrV-ra-BV1">
+                                <rect key="frame" x="0.0" y="724" width="393" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGa-qR-AiV">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="45"/>
+                                        <color key="tintColor" red="0.26511224210000001" green="0.32817635369999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.26511224210000001" green="0.32817635369999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bmu-mZ-hZh">
+                                        <rect key="frame" x="69.666666666666686" y="0.0" width="254" height="46"/>
+                                        <color key="tintColor" red="0.26511224210000001" green="0.32817635369999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="ekH-Po-IJl"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="playBack:" destination="BYZ-38-t0r" eventType="valueChanged" id="txI-za-1gq"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="571-ec-LgE">
+                                        <rect key="frame" x="321.66666666666669" y="0.0" width="71.333333333333314" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.26511224210000001" green="0.32817635369999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstItem="571-ec-LgE" firstAttribute="top" secondItem="xrV-ra-BV1" secondAttribute="top" id="8KV-rP-5Ou"/>
+                                    <constraint firstAttribute="width" constant="393" id="BJE-mZ-NCb"/>
+                                    <constraint firstAttribute="bottom" secondItem="bmu-mZ-hZh" secondAttribute="bottom" id="FVD-jf-F8t"/>
+                                    <constraint firstItem="bmu-mZ-hZh" firstAttribute="top" secondItem="xrV-ra-BV1" secondAttribute="top" id="Hqd-IN-9G2"/>
+                                    <constraint firstAttribute="height" constant="45" id="L5p-Wb-fVO"/>
+                                    <constraint firstAttribute="bottom" secondItem="eGa-qR-AiV" secondAttribute="bottom" id="Pqc-YY-RAI"/>
+                                    <constraint firstAttribute="bottom" secondItem="571-ec-LgE" secondAttribute="bottom" id="a9b-43-GwT"/>
+                                    <constraint firstItem="eGa-qR-AiV" firstAttribute="top" secondItem="xrV-ra-BV1" secondAttribute="top" id="e0D-V3-mqV"/>
+                                    <constraint firstItem="bmu-mZ-hZh" firstAttribute="leading" secondItem="eGa-qR-AiV" secondAttribute="trailing" id="kC9-le-Xw2"/>
+                                    <constraint firstItem="bmu-mZ-hZh" firstAttribute="centerX" secondItem="xrV-ra-BV1" secondAttribute="centerX" id="lpg-da-LHX"/>
+                                    <constraint firstItem="571-ec-LgE" firstAttribute="leading" secondItem="bmu-mZ-hZh" secondAttribute="trailing" id="pVW-Q2-rbj"/>
+                                    <constraint firstAttribute="trailing" secondItem="571-ec-LgE" secondAttribute="trailing" id="rXD-Vr-ceG"/>
+                                    <constraint firstItem="eGa-qR-AiV" firstAttribute="leading" secondItem="xrV-ra-BV1" secondAttribute="leading" id="sh4-Oh-s4s"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.26511224210000001" green="0.32817635369999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Shb-bU-O1N" secondAttribute="bottom" id="C22-A1-uCn"/>
+                            <constraint firstItem="xrV-ra-BV1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="665" id="GjQ-XA-51p"/>
+                            <constraint firstItem="Shb-bU-O1N" firstAttribute="top" secondItem="xrV-ra-BV1" secondAttribute="bottom" id="UfK-Er-Cfy"/>
+                            <constraint firstItem="Shb-bU-O1N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hRa-BM-qwe"/>
+                            <constraint firstItem="xrV-ra-BV1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jm9-Jo-ZfD"/>
+                            <constraint firstItem="Shb-bU-O1N" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="srt-C7-zs0"/>
+                            <constraint firstItem="xrV-ra-BV1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x8i-aS-cin"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CurrentTime" destination="eGa-qR-AiV" id="mOK-y5-aol"/>
+                        <outlet property="EstimatedTime" destination="571-ec-LgE" id="SU3-Jr-xZz"/>
+                        <outlet property="Forward" destination="8g4-xG-wzd" id="yDW-AH-LUd"/>
+                        <outlet property="Pause" destination="UhY-cO-CNX" id="1XW-sX-QoE"/>
+                        <outlet property="Play" destination="97h-iC-YLb" id="3cW-3M-sN0"/>
+                        <outlet property="PlaybackProgress" destination="bmu-mZ-hZh" id="0EB-JG-g1P"/>
+                        <outlet property="Rewind" destination="9jv-R1-bBn" id="9RI-DL-jFR"/>
+                        <outlet property="Stop" destination="HV6-bz-Rjh" id="3TI-oY-y39"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="62.676056338028175"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backward.fill" catalog="system" width="128" height="77"/>
+        <image name="forward.fill" catalog="system" width="128" height="77"/>
+        <image name="pause.fill" catalog="system" width="117" height="128"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
